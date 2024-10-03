@@ -13,6 +13,7 @@ return {
 			'saadparwaiz1/cmp_luasnip',
 			'petertriho/cmp-git',
 			'onsails/lspkind.nvim',
+			'rafamadriz/friendly-snippets',
 			{
 
 				'windwp/nvim-autopairs',
@@ -28,6 +29,9 @@ return {
 			local cmp = require("cmp")
 			local lspkind = require('lspkind')
 			local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+			require("luasnip.loaders.from_vscode").lazy_load()  -- Load VSCode-style snippets
+			
+
 			local kind_icons = {
 				Text = "📄",        -- Documento
 				Method = "🔧",      -- Herramienta
@@ -85,6 +89,7 @@ return {
 					{ name  = "buffer"},
 					{ name = "latex_symbols" },
 					{ name = "path" },
+					{ name = "emmet_ls" },
 
 				}),
 				formatting = {
@@ -103,6 +108,7 @@ return {
 								nvim_lsp = "[LSP]",
 								nvim_lua = "[Lua]",
 								latex_symbols = "[LaTeX]",
+								emmet_ls = "[Emmet]",
 							})[entry.source.name]
 							return vim_item
 						end,
