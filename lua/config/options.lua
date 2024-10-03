@@ -16,3 +16,5 @@ option.relativenumber = true
 option.shiftwidth = 4
 option.splitbelow = true
 option.splitright = true
+option.inccommand = "split"
+
