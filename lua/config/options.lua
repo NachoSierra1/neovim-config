@@ -17,4 +17,4 @@ option.shiftwidth = 4
 option.splitbelow = true
 option.splitright = true
 option.inccommand = "split"
-
+option.timeoutlen = vim.g.vscode and 1000 or 300 -- Lower than default (1000) to quickly trigger which-key

@@ -92,3 +92,12 @@ cmp.setup({
 		-- ... Your other mappings ...
 	}),
 })
+
+
+
+require('live-server').setup(opts)
+keymap('n', '<leader>ls', '<cmd>LiveServerStart <CR>')
+keymap('n', '<leader>ss', '<cmd>LiveServerStop <CR>')
+
+-- lazy
+keymap("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
